@@ -1,0 +1,36 @@
+
+.containeer {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background-image: url(https://img.freepik.com/premium-photo/online-fashion-shopping-with-computer_23-2150400628.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;*/
+  
+     color: #0f0e0e; 
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: calc(100vh - 72px);
+  }
+ .containeer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+    url('https://cdn.wamda.com/feature-images/fcdf0ef77c83f24.jpg');
+    background-size: cover;
+    /*أوcontainحسباحتياجك*/background-repeat: no-repeat;
+    filter: blur(2px);
+    /*مقدارالضبابية*/z-index: -1;
+    /*لتكونالطبقةخلفالمحتوى*/
+    -webkit-filter: blur(3px);
+}

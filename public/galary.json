@@ -1,0 +1,86 @@
+{
+    "galary": [
+        {
+            "id": 1,
+            "title": "Portrait of a Lady",
+            "price": 1.99,
+            "category": "Realism",
+            "description": "A vibrant painting of a yellow pail against a scenic backdrop.",
+            "image": "https://averegallery.com/wp-content/uploads/2017/09/AGSD918.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Manchester Central N",
+            "price": 2.99,
+            "category": "Realism",
+            "description": "A beautifully crafted blue bowl placed on a wooden table.",
+            "image": "https://averegallery.com/wp-content/uploads/2017/09/AGSO161.jpg"
+        },
+        {
+            "id": 3,
+            "title": "My Woman",
+            "price": 3.99,
+            "category": "Realism",
+            "description": "A stylish red hat displayed on a wooden surface.",
+            "image": "https://averegallery.com/wp-content/uploads/2017/09/AGSO192.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Sailing Boat",
+            "price": 4.99,
+            "category": "Realism",
+            "description": "A lush green plant in a stylish pot, adding vibrancy to any space.",
+            "image": "https://averegallery.com/wp-content/uploads/2017/09/AGS77.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Purple Pillow",
+            "price": 5.99,
+            "category": "Home & Kitchen",
+            "description": "A plush purple pillow that adds comfort and style to your home.",
+            "image": "https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2FFLoQI4G9pPuclpexoAtlmw%252FPrint_approx_21_x_14_cm_ABP24__Public_Interactions__PR__General_I_HiRes-11.jpg&width=1820"
+        }, {
+            "id": 6,
+            "title": "Purple Pillow",
+            "price": 5.99,
+            "category": "Home & Kitchen",
+            "description": "A plush purple pillow that adds comfort and style to your home.",
+            "image": "https://d7hftxdivxxvm.cloudfront.net/?quality=80&resize_to=width&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2FI3GGqgj8iLbT7Z60nz2pDg%252FPrint_approx_21_x_14_cm_ABP24__Public_Program__Public_Interaction_HiRes-8.jpg&width=1820"
+        }, {
+            "id": 7,
+            "title": "Purple Pillow",
+            "price": 5.99,
+            "category": "Home & Kitchen",
+            "description": "A plush purple pillow that adds comfort and style to your home.",
+            "image": "https://d7hftxdivxxvm.cloudfront.net/?height=2880&quality=80&resize_to=fit&src=https%3A%2F%2Fartsy-media-uploads.s3.amazonaws.com%2F5UjlFU_tUdgYfJpcDwwZbw%252FPPOW_2024_Art%2BBasel%2BParis_Julian%2BBlum_01.jpg&width=2880"
+        }, {
+            "id": 8,
+            "title": "Purple Pillow",
+            "price": 5.99,
+            "category": "Home & Kitchen",
+            "description": "A plush purple pillow that adds comfort and style to your home.",
+            "image": "https://d7hftxdivxxvm.cloudfront.net/?height=2880&quality=80&resize_to=fit&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2F9v1juUp7jIg-YhNCuOoSog%2Fmain.jpg&width=2880"
+        }, {
+            "id": 9,
+            "title": "El Senwaar",
+            "price": 100,
+            "category": "legend",
+            "description": "A man who died and lived defending his honor and religion.",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOAaFPokfPOSVgB8W2eR4lcWdqZ2bsJVSXgYrp4KCMdCHe8Qwq3512q_GUZR0cki1ixks&usqp=CAU"
+        }, {
+            "id": 10,
+            "title": "Al-Aqsa Mosque",
+            "price": 9,
+            "category": "Islamic",
+            "description": "Al-Aqsa Mosque in beloved Palestine.",
+            "image": "https://qatarmuseumsstorageprd.blob.core.windows.net/media/images/beautiful-memories-of-palestine.55394fda.fill-1480x925.jpg"
+        }, {
+            "id": 11,
+            "title": "Palestine",
+            "price": 1000,
+            "category": "History",
+            "description": "History and present of Palestine.",
+            "image": "https://sa3eeda.com/cdn/shop/files/Palastinemap_530x@2x.jpg?v=1697458930"
+        }
+    ]
+}
