@@ -6,7 +6,7 @@ import cover from "./images/cover.png";
 import reviews from "./images/reviews.png";
 import Group1 from "./images/Group1.png";
 import AppLoader from "../../components/AppLoader";
-
+import { Helmet } from 'react-helmet';
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -98,6 +98,12 @@ const Products = () => {
       </header>
 
       <section className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <Helmet>
+        <title>All photos - Pixelate</title>
+       
+        <meta name="description" content="Browse our collection of photos." />
+        <meta name="keywords" content="products, buy Photos, online shopping" />
+      </Helmet>
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} data={product} />
         ))}
