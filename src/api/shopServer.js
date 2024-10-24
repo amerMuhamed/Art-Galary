@@ -1,16 +1,42 @@
 import axios from "axios";
-
-
+import CryptoJS from "crypto-js";
 export const login = async (username, password) => {
   try {
-    const response = await axios.post("https://fakestoreapi.com/auth/login", {
-      username,
-      password,
-    });
-    localStorage.setItem("token", JSON.stringify(response.data.token));
-    return response.data;
-  } catch (e) {
-    throw new Error("Invalid username or password");
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(
+      (u) => u.username === username && u.password === password
+    );
+
+    if (!user) {
+      throw new Error('Invalid username or password');
+    }
+    const timestamp = Date.now();
+    const randomString = Math.random().toString(36).substring(2, 15); // Random string for additional complexity
+    const rawToken = `${user.username}-${timestamp}-${randomString}`;
+
+  
+    const token = CryptoJS.SHA256(rawToken).toString();
+    localStorage.setItem('token', JSON.stringify(token));
+    return { token, user };  
+  } catch (error) {
+    console.error('Error during login:', error);
+    throw new Error('Invalid username or password');
+  }
+};
+export const registerUser = async (userData) => {
+  try {
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    existingUsers.push(userData);
+    localStorage.setItem('users', JSON.stringify(existingUsers));
+    const timestamp = Date.now();
+    const randomString = Math.random().toString(36).substring(2, 15); // Random string for additional complexity
+    const rawToken = `${userData.username}-${timestamp}-${randomString}`;
+    const token = CryptoJS.SHA256(rawToken).toString();
+    localStorage.setItem('token', JSON.stringify(token));
+    return { success: true,token, message: "User registered successfully!" };
+  } catch (error) {
+    console.error("Error posting user data:", error);
+    return { success: false,userData, message: "Failed to register user." };
   }
 };
 
@@ -39,8 +65,6 @@ export const postProduct = async (productData) => {
     throw error;
   }
 };
-
-
 export const fetchProductById = async (id) => {
   try {
     const response = await axios.get('galary.json');

@@ -13,7 +13,7 @@ const validationSchema = Yup.object({
   image: Yup.mixed()
     .required("Image is required")
     .test("fileSize", "File size is too large", (value) => !value || (value && value.size <= 2000000))
-    .test("fileType", "Unsupported file type", (value) => !value || (value && ["image/jpeg", "image/png"].includes(value.type))),
+    .test("fileType", "Unsupported file type", (value) => !value || (value && ["image/jpg", "image/png"].includes(value.type))),
   category: Yup.string().required("Category is required"),
 });
 

@@ -8,6 +8,7 @@ import Cart from "./pages/customer/Cart";
 import ProductForm from "./pages/admin/AddProduct";
 import Footer from "./components/Footer";
 import "./index.css";
+import Register from "./pages/shared/Register";
 function App() {
   const { authenticationData } = useContext(AuthContext);
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Products />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/products" element={<Products />} />
         <Route path="/add-product" element={<ProductForm />} />
         <Route path="/cart" element={<Cart />} />

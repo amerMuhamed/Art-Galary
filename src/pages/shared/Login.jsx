@@ -4,15 +4,15 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { login } from "../../api/shopServer";
 import { AuthContext } from "../../hooks/UserContext";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./_styles.css";
 const Login = () => {
   const { saveAuthenticationData, authenticationData } =
     useContext(AuthContext);
-
   if (authenticationData) {
     window.location.href = "/products";
   }
-
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -31,9 +31,10 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     setLoading(true);
+    
     try {
       const authData = await login(data.username, data.password);
-      saveAuthenticationData(authData.token);
+     saveAuthenticationData(authData.token);
     } catch (error) {
       setError(error.message);
     } finally {
@@ -105,6 +106,10 @@ const Login = () => {
             )}
           </button>
         </form>
+        <div className="mt-2 text-white p-2 text-xl flex gap-1 ">
+          <h1>Don't have an account?</h1>
+        <Link to="/register" className="text-teal-950">Sign Up</Link>
+        </div>
       </div>
     </div>
   );

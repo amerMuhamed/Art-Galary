@@ -6,7 +6,7 @@ import logo from "../pages/customer/images/p-removebg-preview.png";
 const NavBar = () => {
   const { authenticationData, logout } = useContext(AuthContext);
   const { cartData, loading } = useContext(CartContext);
-
+ 
   if (loading) {
     return null;
   }
@@ -54,12 +54,19 @@ const NavBar = () => {
               </button>
             </>
           ) : (
+            <div>
             <Link
               to="/login"
               className="bg-blue-500 text-white hover:bg-blue-900 px-5 py-2 rounded-md font-semibold"
             >
               Login
+            </Link> <Link
+              to="/register"
+              className="bg-blue-500 text-white hover:bg-blue-900 px-5 py-2 rounded-md font-semibold"
+            >
+              Sign Up
             </Link>
+            </div>
           )}
         </div>
       </div>
